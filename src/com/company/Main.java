@@ -57,7 +57,7 @@ public class Main {
 
     private static double averageSalary(Employee[] employees) {
         int sum = sumSalaryEmployee(employees);
-        double averageSalary = sum / employees.length;
+        double averageSalary = (double) sum / employees.length;
         System.out.println("Средняя зарплата среди сотрудников " + averageSalary);
         return averageSalary;
     }
@@ -83,6 +83,7 @@ public class Main {
         employee[9] = new Employee("Никита Радий Евгеньевич", 5, 111000);
 
         listEmployee();
+
         sumSalaryEmployee(employee);
         minSalary(employee);
         maxSalary(employee);
