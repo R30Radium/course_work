@@ -5,12 +5,10 @@ public class Employee {
     private String fullName;
     private int department;
     private int salary;
-    int id;
-    static int counter = 1;
+    private int id;
+    private int counter = 1;
 
-    String getFullName() {
-        return this.fullName;
-    }
+    String getFullName() {return this.fullName;}
 
     private int getDepartment() {
         return this.department;
@@ -40,7 +38,6 @@ public class Employee {
     }
 
 
-    //Как методы ниже вообще сделать private? Дайте подсказки, если это возможно
     public int hashCode() {
         return Objects.hash(fullName, department, salary, id);
     }
