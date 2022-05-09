@@ -1,7 +1,5 @@
 package com.company;
-
-import java.util.Date;
-
+import java.util.Objects;
 public class Main {
 
     //я очень устал это делать
@@ -14,7 +12,7 @@ public class Main {
         }
     }
 
-    public static int sumSalaryEmployee(Employee[] employees) {
+    private static int sumSalaryEmployee(Employee[] employees) {
         int sum = 0;
         for (int i = 0; i < employee.length; i++) {
             sum = sum + employee[i].getSalary();
@@ -24,7 +22,7 @@ public class Main {
 
     }
 
-    public static int maxSalary(Employee[] employees) {
+    private static int maxSalary(Employee[] employees) {
         int maxSalary = employee[0].getSalary();
         String maxName = employee[0].getFullName();
         for (int i = 0; i < employee.length; i++) {
@@ -38,7 +36,7 @@ public class Main {
 
     }
 
-    public static int minSalary(Employee[] employees) {
+    private static int minSalary(Employee[] employees) {
         int minSalary = employee[0].getSalary();
         String minName = employee[0].getFullName();
 
@@ -57,14 +55,14 @@ public class Main {
     }
 
 
-    public static int averageSalary(Employee[] employees) {
+    private static double averageSalary(Employee[] employees) {
         int sum = sumSalaryEmployee(employees);
-        int averageSalary = sum / 10;
+        double averageSalary = sum / employees.length;
         System.out.println("Средняя зарплата среди сотрудников " + averageSalary);
         return averageSalary;
     }
 
-    public static void allEmployee() {
+    private static void allEmployee() {
         for (int i = 0; i < employee.length; i++) {
             System.out.println("Сотрудник ФИО - " + employee[i].getFullName());
         }

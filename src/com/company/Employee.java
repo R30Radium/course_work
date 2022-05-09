@@ -2,37 +2,37 @@ package com.company;
 import java.util.Objects;
 
 public class Employee {
-    public String fullName; // в пул реквесте не было очень понятно, указывается ли на то,
-    public int department; // что приват надо поменять на паблик, или что то другое
-    public int salary;
+    private String fullName;
+    private int department;
+    private int salary;
     int id;
     static int counter = 1;
 
-    public String getFullName() {
+    String getFullName() {
         return this.fullName;
     }
 
-    public int getDepartment() {
+    private int getDepartment() {
         return this.department;
     }
 
-    public int getSalary() {
+    int getSalary() {
         return this.salary;
     }
 
-    public int getId() {
+    private int getId() {
         return this.id;
     }
 
-    public void setDepartment(int department) {
+    private void setDepartment(int department) {
         this.department = department;
     }
 
-    public void setSalary(int salary) {
+    private void setSalary(int salary) {
         this.salary = salary;
     }
 
-    public Employee(String fullName, int department, int salary) {
+     Employee(String fullName, int department, int salary) {
         this.fullName = fullName;
         this.department = department;
         this.salary = salary;
@@ -40,7 +40,7 @@ public class Employee {
     }
 
 
-
+    //Как методы ниже вообще сделать private? Дайте подсказки, если это возможно
     public int hashCode() {
         return Objects.hash(fullName, department, salary, id);
     }
