@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Date;
 
 public class Main {
 
@@ -7,7 +8,7 @@ public class Main {
 
     private static Employee[] employee = new Employee[10];
 
-    public static void listEmployee() {
+    private static void listEmployee() {
         for (int i = 0; i < employee.length; i++) {
             System.out.println(employee[i]);
         }
@@ -57,12 +58,8 @@ public class Main {
 
 
     public static int averageSalary(Employee[] employees) {
-        int sum = 0;
-        int averageSalary = 0;
-        for (int i = 0; i < employee.length; i++) {
-            sum = sum + employee[i].getSalary();
-            averageSalary = sum / employee.length;
-        }
+        int sum = sumSalaryEmployee(employees);
+        int averageSalary = sum / 10;
         System.out.println("Средняя зарплата среди сотрудников " + averageSalary);
         return averageSalary;
     }
@@ -72,6 +69,7 @@ public class Main {
             System.out.println("Сотрудник ФИО - " + employee[i].getFullName());
         }
     }
+
 
     public static void main(String[] args) {
 
@@ -92,5 +90,10 @@ public class Main {
         maxSalary(employee);
         averageSalary(employee);
         allEmployee();
+
     }
-}
+
+
+
+
+    }

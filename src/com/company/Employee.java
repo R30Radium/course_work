@@ -2,9 +2,9 @@ package com.company;
 import java.util.Objects;
 
 public class Employee {
-    private String fullName;
-    private int department;
-    private int salary;
+    public String fullName; // в пул реквесте не было очень понятно, указывается ли на то,
+    public int department; // что приват надо поменять на паблик, или что то другое
+    public int salary;
     int id;
     static int counter = 1;
 
@@ -51,6 +51,8 @@ public class Employee {
         Employee employee = (Employee) o;
         return department == employee.department && salary == employee.salary && id == employee.id && Objects.equals(fullName, employee.fullName);
     }
-
+    public String toString() {
+        return "Информация о сотруднике: ФИО - " + this.fullName + ", Отдел № " + this.department + ", З/П:" + this.salary;
+    }
 
 }
